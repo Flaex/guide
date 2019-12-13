@@ -1,11 +1,5 @@
-<button
-  class="btn btn-primary"
-  (click)="onDisplayMessage()"  
->
+<button class="btn btn-primary" (click)="onDisplayMessage()">
   Display details
 </button>
-<div *ngIf="!paragraphVisible; else displayMessage"></div>
-<ng-template #displayMessage>
-  <p id="Message">These are de details of the message you want to see.</p>
-  
-</ng-template>
+
+<p id="Message">These are de details of the message you want to see.</p>
