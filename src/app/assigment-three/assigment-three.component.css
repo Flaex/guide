@@ -1,3 +1,19 @@
-.msgContainer { height: 50px;}
-.msgContainer p { padding: 10px;}
-.white { color: white;}
+.msgContainer {
+  height: 50px;
+}
+.msgContainer p {
+  padding: 10px;
+}
+.active {
+  background-color: blue;
+}
+.white {
+  color: white;
+}
+ul {
+  list-style: none;
+}
+
+ul > li {
+  padding: 1.5%;
+}

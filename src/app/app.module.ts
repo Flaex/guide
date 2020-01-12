@@ -13,7 +13,7 @@ import { AssigmentThreeComponent } from './assigment-three/assigment-three.compo
     AppComponent,
     ServersComponent,
     ServerComponent,
-    AssigmentThreeComponent 
+    AssigmentThreeComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,5 +6,12 @@
   <p id="Message">This text is activated with the button above</p>
 </div>
 
-<div id="ClickCount">
-</div>
+<ul>
+  <li
+    *ngFor="let i of clickArray"
+    [ngStyle]="{ backgroundColor: getColor(i) }"
+    [ngClass]="{ white: clickArray[i - 1] >= 5 }"
+  >
+    {{ clickArray[i - 1] }}
+  </li>
+</ul>

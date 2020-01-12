@@ -8,13 +8,13 @@ import { Component, OnInit } from "@angular/core";
 export class AssigmentThreeComponent implements OnInit {
   click = 0;
   clickArray = [];
+
   constructor() {}
 
   ngOnInit() {}
 
   onDisplayMessage() {
     const msgContainer = document.querySelector("#Message");
-    const clickCount = document.querySelector("#ClickCount");
 
     if ((<HTMLElement>msgContainer).style.display === "none") {
       (<HTMLElement>msgContainer).style.display = "block";
@@ -25,18 +25,10 @@ export class AssigmentThreeComponent implements OnInit {
     this.click++;
     this.clickArray.push(this.click);
 
-    if (this.clickArray.length <= 4) {
-      clickCount.insertAdjacentHTML(
-        "beforeend",
-        `<div style="color:gray">${this.click}</div>`
-      );
-    } else {
-      clickCount.insertAdjacentHTML(
-        "beforeend",
-        `<div style="color:green">${this.click}</div>`
-      );
-    }
-    
     console.log(this.clickArray);
+  }
+
+  getColor(i) {
+    return this.clickArray[i - 1] >= 5 ? "blue" : "none";
   }
 }
